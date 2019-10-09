@@ -1,0 +1,26 @@
+body {
+  color: white;
+  background: black;
+}
+
+.outer-div {
+  text-align: center;
+}
+
+.header-img {
+  width: 30vh;
+}
+
+.link-icon {
+  color: #62ca62;
+}
+
+svg {
+  width: 64px;
+  height: 64px;
+  fill: currentColor;
+}
+
+.link-icons {
+  margin-top: 48px;
+}
