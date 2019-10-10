@@ -10,7 +10,6 @@ import Projects from "../components/projects"
 import Contact from "../components/contact"
 
 import * as profileImg from "../assets/photo.png"
-import * as redirect from "../redirect.js"
 
 const IndexPage = () => {
   return (
