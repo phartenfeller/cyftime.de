@@ -35,14 +35,22 @@ const About = () => {
           {!expanded ? textPreview : fullText}
         </div>
         <div className="mt-4">
-        {!expanded ? (
-          
-            <button className="text-green-300 hover:text-500" onClick={() => setExpanded(true)}>more...</button>
-         
-        ) : (
-          <button className="text-green-300 hover:text-500" onClick={() => setExpanded(false)}>close</button>
-        )}
-         </div>
+          {!expanded ? (
+            <button
+              className="text-green-300 hover:text-500 font-bold"
+              onClick={() => setExpanded(true)}
+            >
+              more...
+            </button>
+          ) : (
+            <button
+              className="text-green-300 hover:text-500 font-bold"
+              onClick={() => setExpanded(false)}
+            >
+              close
+            </button>
+          )}
+        </div>
       </div>
     </div>
   )

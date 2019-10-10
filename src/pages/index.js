@@ -6,19 +6,22 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import LinkIcons from "../components/linkIcons"
 import About from "../components/about"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
 
 import * as profileImg from "../assets/photo.png"
+import * as redirect from "../redirect.js"
 
 const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div class="outer-div">
+      <div className="antialiased">
         <img src={profileImg} alt="photo" className="m-auto w-3/4"></img>
-        <div>
-          <LinkIcons />
-        </div>
+        <LinkIcons />
         <About />
+        <Projects />
+        <Contact />
       </div>
 
       {/* <Link to="/page-2/">Go to page 2</Link> */}
