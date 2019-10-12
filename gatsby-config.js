@@ -3,7 +3,7 @@ module.exports = {
     title: `cyftime`,
     description: `Germany-based Artist, part of "#DEKUBITUS"-trio with producers and long time friends Stapes and Gobi. Member of the “Water/Gang” artists-collective.`,
     author: `cyf`,
-    siteUrl: `https://cyftime.de`
+    siteUrl: `https://cyftime.de`,
   },
   plugins: [
     `gatsby-plugin-postcss`,

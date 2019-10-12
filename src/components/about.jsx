@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react"
-import { useSpring, animated } from "react-spring"
-import ResizeObserver from "resize-observer-polyfill"
+import React, { useState, useRef, useEffect } from 'react'
+import { useSpring, animated } from 'react-spring'
+import ResizeObserver from 'resize-observer-polyfill'
 
 const usePrevious = value => {
   const ref = useRef()
@@ -43,12 +43,12 @@ const About = () => {
     <div
       className="mt-6"
       style={{
-        background: "linear-gradient(180deg, #5A826F 0%, #55615C 100%)",
+        background: 'linear-gradient(180deg, #5A826F 0%, #55615C 100%)',
       }}
     >
       <div
         className="mx-8 py-6"
-        style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
+        style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
       >
         <h2 className="text-green-400 text-3xl font-bold mb-2">
           About the Artist
@@ -84,7 +84,7 @@ const Text = ({ text }) => {
   return (
     <animated.div
       className="text-green-200 text-xl"
-      style={{ overflow: "hidden", ...props }}
+      style={{ overflow: 'hidden', ...props }}
     >
       <div {...bind}>{text}</div>)
     </animated.div>

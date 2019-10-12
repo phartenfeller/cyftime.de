@@ -4,16 +4,23 @@ const Contact = () => {
   return (
     <div
       style={{
-        background:
-          'linear-gradient(180deg, rgba(22, 43, 36, 0.22) 0%, rgba(53, 77, 69, 0.22) 100%), #0C1B16;',
+        background: '(180deg, #000000 0%, #0A130A 100%)',
       }}
     >
-      <div
-        className="mx-8 py-6"
-        style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
-      >
+      <div className="mx-8 py-6">
         <h2 className="text-green-400 text-3xl font-bold mb-2">Contact</h2>
       </div>
+      <form id="contact">
+        <label htmlFor="email">
+          E-Mail
+          <input type="text" id="email" />
+        </label>
+        <label htmlFor="message">
+          Message
+          <input type="textarea" id="message" />
+        </label>
+        <button type="button">Send</button>
+      </form>
     </div>
   )
 }
