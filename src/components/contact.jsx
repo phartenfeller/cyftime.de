@@ -16,6 +16,10 @@ const Contact = () => {
         },
         body: JSON.stringify({ email, message, subject }),
       })
+
+      setEmail('')
+      setSubject('')
+      setMessage('')
     }
   }
 

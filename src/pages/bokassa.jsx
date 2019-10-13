@@ -38,6 +38,18 @@ const Bokassa = () => {
             className="m-auto shadow-2xl"
           />
           <ProjectAvailable />
+
+          <iframe
+            className="mt-16"
+            loading="lazy"
+            title="Bokassa on Soundcloud"
+            width="100%"
+            height="450"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/883249351&color=%23434352&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          />
         </div>
       </div>
     </Layout>
