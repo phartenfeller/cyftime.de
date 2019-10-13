@@ -1,4 +1,6 @@
 import React from 'react'
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const data = [
   {
@@ -41,28 +43,51 @@ const data = [
 ]
 
 const LinkIcons = () => {
+  const imageData = useStaticQuery(graphql`
+    query ProfileImage {
+      image: file(relativePath: { eq: "photo.png" }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <div className="mt-6">
-      <div className="m-auto w-3/4 justify-between flex">
-        {data.map(icon => {
-          return (
-            <a
-              href={icon.url}
-              key={icon.name}
-              className="text-green-400 hover:text-green-700"
-              title={icon.name}
-              aria-label={icon.name}
-            >
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="fill-current w-3/4 h-3/4 m-auto"
+    <div className="lg:text-center lg:flex lg:h-5/12">
+      <div className="m-auto w-3/4 h-3/4 lg:m-auto lg:order-last lg:h-5/12 lg:w-5/12 xl:ml-32">
+        <Img
+          fluid={imageData.image.childImageSharp.fluid}
+          alt="photo"
+          className="max-h-full max-w-full h-auto w-auto object-contain"
+        />
+      </div>
+      <div className="mt-6 lg:w-4/12 lg:h-auto lg:m-0 lg:order-first">
+        <div className="m-auto w-3/4 justify-between flex lg:block">
+          {data.map(icon => {
+            return (
+              <a
+                href={icon.url}
+                key={icon.name}
+                className="text-green-400 hover:text-green-700"
+                title={icon.name}
+                aria-label={icon.name}
               >
-                <path d={icon.svgPath} />
-              </svg>
-            </a>
-          )
-        })}
+                <svg
+                  viewBox="0 0 24 24"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="fill-current w-3/4 h-3/4 m-auto lg:ml-64 lg:py-6 lg:h-1/6 lg:w-1/6"
+                >
+                  <path d={icon.svgPath} />
+                </svg>
+              </a>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

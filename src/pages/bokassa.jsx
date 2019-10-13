@@ -30,8 +30,8 @@ const Bokassa = () => {
           background: 'linear-gradient(180deg, #000000 0%, #091914 100%)',
         }}
       >
-        <div className="mx-8">
-          <h1 className="text-4xl text-bold">Bokassa</h1>
+        <div className="mx-8 lg:w-3/4 lg:m-auto xl:w-1/2">
+          <h1 className="text-4xl text-bold lg:text-5xl">Bokassa</h1>
           <Img
             fluid={data.image.childImageSharp.fluid}
             alt="bokassa-cover"

@@ -57,7 +57,9 @@ const data = [
 const ProjectAvailable = () => {
   return (
     <div className="mt-6">
-      <div className="text-green-300 font-bold text-xl">Available at:</div>
+      <div className="text-green-300 font-bold text-xl lg:text-2xl xl:text-3xl">
+        Available at:
+      </div>
       <div className="m-auto flex flex-wrap">
         {data.map(icon => {
           return (
@@ -71,11 +73,11 @@ const ProjectAvailable = () => {
                 <svg
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="fill-current w-6 h-6 inline-block mr-3"
+                  className="fill-current w-6 h-6 inline-block mr-3 lg:w-12 lg:h-12"
                 >
                   <path d={icon.svgPath} />
                 </svg>
-                <span className="text-green-200">{icon.name}</span>
+                <span className="text-green-200 lg:text-lg">{icon.name}</span>
               </a>
             </div>
           )

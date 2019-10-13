@@ -47,7 +47,7 @@ const About = () => {
       }}
     >
       <div
-        className="mx-8 py-6"
+        className="mx-8 py-6 lg:mx-64"
         style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
       >
         <h2 className="text-green-400 text-3xl font-bold mb-2">

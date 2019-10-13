@@ -1,5 +1,4 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
 
 import Img from 'gatsby-image'
@@ -24,20 +23,12 @@ const Header = () => {
         <Img
           fluid={data.image.childImageSharp.fluid}
           alt="cyf"
-          className="w-2/6 m-auto"
+          className="w-2/6 m-auto lg:w-64"
         />
         {/* <img src={headerImg} alt="cyf" className="w-2/6 m-auto" /> */}
       </Link>
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
