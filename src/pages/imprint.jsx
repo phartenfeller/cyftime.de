@@ -78,6 +78,10 @@ const Imprint = () => (
           entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
           werden wir derartige Inhalte umgehend entfernen.
         </p>
+        <p>
+          Quelle:
+          <a href="https://www.e-recht24.de">e-recht24.de</a>
+        </p>
       </div>
     </div>
   </Layout>
