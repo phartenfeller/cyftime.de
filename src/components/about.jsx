@@ -57,7 +57,7 @@ const About = () => {
         <div className="mt-4">
           {!expanded ? (
             <button
-              className="text-green-300 hover:text-500 font-bold"
+              className="text-green-300 hover:text-500 font-bold focus:outline-nones"
               onClick={() => setExpanded(true)}
             >
               more...

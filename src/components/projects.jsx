@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import Img from 'gatsby-image'
 
@@ -40,12 +40,14 @@ const Projects = () => {
           <div className="text-green-100 font-bold text-4xl mt-4">
             Bokassa EP
           </div>
-          <button
-            type="button"
-            className="text-green-300 hover:text-500 font-bold"
-          >
-            more...
-          </button>
+          <Link to="/bokassa/">
+            <button
+              type="button"
+              className="text-green-300 hover:text-500 font-bold focus:outline-none"
+            >
+              more...
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ const Contact = () => {
           <div className="text-center mt-4">
             <button
               type="button"
-              className="m-auto py-1 px-20 rounded-md shadow-2xl"
+              className="m-auto py-1 px-20 rounded-md shadow-2xl focus:outline-none"
               style={{
                 background: 'linear-gradient(180deg, #04FF78 0%, #00AE50 100%)',
               }}
