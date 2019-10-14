@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^cyftime\.de$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.cyftime\.de$
+RewriteRule ^(.*)$ "https\:\/\/cyftime\.de\/$1" [R=301,L]
+
