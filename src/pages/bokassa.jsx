@@ -1,11 +1,9 @@
-import React from 'react'
-
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
-
 import ProjectAvailable from '../components/projectAvailable'
+import SEO from '../components/seo'
 
 const Bokassa = () => {
   const data = useStaticQuery(graphql`
@@ -23,9 +21,12 @@ const Bokassa = () => {
 
   return (
     <Layout>
-      <SEO title="Bokassa" />
+      <SEO
+        title="Bokassa"
+        description="The EP Bokassa from cyf is now out! Listen to the songs like restin, silkey, slifer and bokassa on spotify, apple music, soundcloud and more..."
+      />
       <div
-        className="pb-32"
+        className="pb-32 antialiased"
         style={{
           background: 'linear-gradient(180deg, #000000 0%, #091914 100%)',
         }}

@@ -66,7 +66,7 @@ const ProjectAvailable = () => {
             <div key={icon.name} className="w-1/2 mt-4">
               <a
                 href={icon.url}
-                className="text-green-400 hover:text-green-700 px-4 py-4 w-full"
+                className="text-green-400 hover:text-green-700 px-4 py-4 w-full truncate"
                 title={icon.name}
                 aria-label={icon.name}
               >

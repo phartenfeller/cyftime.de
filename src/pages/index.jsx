@@ -1,16 +1,18 @@
 import React from 'react'
-
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import LinkIcons from '../components/linkIcons'
 import About from '../components/about'
-import Projects from '../components/projects'
 import Contact from '../components/contact'
+import Layout from '../components/layout'
+import LinkIcons from '../components/linkIcons'
+import Projects from '../components/projects'
+import SEO from '../components/seo'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Cyf"
+        description="Website of rapper cyf. His EP Bokassa is out now. Check it out!"
+      />
       <div className="antialiased">
         <LinkIcons />
         <About />

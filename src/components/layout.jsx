@@ -5,10 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-
+import React from 'react'
 import Header from './header'
 import './layout.css'
 
@@ -29,15 +28,21 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer>
-          <div className="inline-block">
+          <div className="block sm:inline-block">
             {`©  ${new Date().getFullYear()} Built with `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </div>
-          <Link to="/datenschutz/" className="inline-block float-right mr-12">
+          <Link
+            to="/datenschutz/"
+            className="block sm:inline-block sm:float-right sm:mr-12"
+          >
             Datenschutzerklärung
           </Link>
-          <Link to="/imprint/" className="inline-block float-right mr-12">
-            Imprint
+          <Link
+            to="/imprint/"
+            className="block sm:inline-block sm:float-right sm:mr-12"
+          >
+            Impressum
           </Link>
         </footer>
       </div>
