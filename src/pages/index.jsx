@@ -10,8 +10,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title="Cyf"
-        description="Website of rapper cyf. His EP Bokassa is out now. Check it out!"
+        title="CYF homepage"
+        description="Website of rapper CYF. His EP Bokassa is out now. Check it out!"
       />
       <div className="antialiased">
         <LinkIcons />

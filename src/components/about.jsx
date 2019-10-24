@@ -50,9 +50,7 @@ const About = () => {
         className="mx-8 py-6 lg:mx-64"
         style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
       >
-        <h2 className="text-green-400 text-3xl font-bold mb-2">
-          About the Artist
-        </h2>
+        <h2 className="text-green-400 text-3xl font-bold mb-2">About CYF</h2>
         <Text text={!expanded ? textPreview : fullText} />
         <div className="mt-4">
           {!expanded ? (
@@ -84,7 +82,7 @@ const Text = ({ text }) => {
   return (
     <animated.div
       className="text-green-200 text-xl"
-      style={{ overflow: 'hidden', ...props }}
+      style={{ overflow: 'hidden', ...props }} //eslint-disable-line
     >
       <div {...bind}>{text}</div>)
     </animated.div>

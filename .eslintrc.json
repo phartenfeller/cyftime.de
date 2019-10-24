@@ -16,6 +16,8 @@
         "trailingComma": "es5"
       }
     ],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
     "require-jsdoc": 0,
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",

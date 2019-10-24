@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 
 const Datenschutz = () => (
   <Layout>
-    <SEO title="Datenschutzerklärung" />
+    <SEO title="Datenschutzerklärung" noIndex />
     <div>
       <h1 className="text-4xl text-green-300 font-bold text-center">
         Datenschutz

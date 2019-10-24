@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 
 const Imprint = () => (
   <Layout>
-    <SEO title="Imprint" />
+    <SEO title="Imprint" noIndex />
     <div className="h-screen">
       <h1 className="text-4xl text-green-300 font-bold text-center">Imprint</h1>
       <div className="mx-4 md:mx-12 lg:mx-48 text-gray-400">

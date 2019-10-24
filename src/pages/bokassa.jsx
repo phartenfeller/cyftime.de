@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 const Bokassa = () => {
   const data = useStaticQuery(graphql`
     query BokassaCover {
-      image: file(relativePath: { eq: "project-bokassa.jpg" }) {
+      image: file(relativePath: { eq: "cyf_bokassa_ep_cover.jpg" }) {
         id
         childImageSharp {
           fluid {
@@ -32,10 +32,10 @@ const Bokassa = () => {
         }}
       >
         <div className="mx-8 lg:w-3/4 lg:m-auto xl:w-1/2">
-          <h1 className="text-4xl text-bold lg:text-5xl">Bokassa</h1>
+          <h1 className="text-4xl text-bold lg:text-5xl">EP: CYF - Bokassa</h1>
           <Img
             fluid={data.image.childImageSharp.fluid}
-            alt="bokassa-cover"
+            alt="cyf bokassa ep cover"
             className="m-auto shadow-2xl"
           />
           <ProjectAvailable />

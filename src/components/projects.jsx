@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query ProjectImage {
-      image: file(relativePath: { eq: "project-bokassa.jpg" }) {
+      image: file(relativePath: { eq: "cyf_bokassa_ep_cover.jpg" }) {
         id
         childImageSharp {
           fluid {
@@ -35,7 +35,7 @@ const Projects = () => {
           <Link to="/bokassa/">
             <Img
               fluid={data.image.childImageSharp.fluid}
-              alt="bokassa-cover"
+              alt="cyf bokassa ep cover"
               className="m-auto shadow-2xl"
             />
           </Link>

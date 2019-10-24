@@ -45,7 +45,7 @@ const data = [
 const LinkIcons = () => {
   const imageData = useStaticQuery(graphql`
     query ProfileImage {
-      image: file(relativePath: { eq: "photo.png" }) {
+      image: file(relativePath: { eq: "cyf_photo.jpg" }) {
         id
         childImageSharp {
           fluid {
@@ -61,7 +61,7 @@ const LinkIcons = () => {
       <div className="m-auto w-3/4 h-3/4 lg:m-auto lg:order-last lg:h-5/12 lg:w-5/12 xl:ml-32">
         <Img
           fluid={imageData.image.childImageSharp.fluid}
-          alt="photo"
+          alt="cyf photo"
           className="max-h-full max-w-full h-auto w-auto object-contain"
         />
       </div>

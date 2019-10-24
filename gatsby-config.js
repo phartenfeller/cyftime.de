@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `cyftime`,
-    description: `Germany-based Artist, part of "#DEKUBITUS"-trio with producers and long time friends Stapes and Gobi. Member of the “Water/Gang” artists-collective.`,
-    author: `cyf`,
+    title: `CYF`,
+    description: `CYF is a germany-based Artist, part of "#DEKUBITUS"-trio with producers and long time friends Stapes and Gobi. Member of the “Water/Gang” artists-collective.`,
+    author: `CYF`,
     siteUrl: `https://cyftime.de`,
   },
   plugins: [

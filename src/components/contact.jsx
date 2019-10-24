@@ -30,7 +30,12 @@ const Contact = () => {
       }}
     >
       <div className="mx-8 py-6 lg:mx-64">
-        <h2 className="text-green-400 text-3xl font-bold mb-2">Contact</h2>
+        <h2 className="text-green-400 text-3xl font-bold mb-2 inline-block mr-2">
+          Contact
+        </h2>
+        <h1 className="text-green-400 text-3xl font-bold mb-2 inline-block">
+          CYF
+        </h1>
         <form id="contact">
           <label htmlFor="email" className="block">
             <span className="block text-green-500 text-sm mt-4">E-Mail</span>
