@@ -13,10 +13,10 @@ const IndexPage = () => {
         title="CYF homepage"
         description="Website of rapper CYF. His EP Bokassa is out now. Check it out!"
       />
-      <div className="antialiased">
+      <div>
         <LinkIcons />
-        <About />
         <Projects />
+        <About />
         <Contact />
       </div>
     </Layout>

@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 html {
-  @apply bg-black
+  background-color: #111010;
+  @apply antialiased;
 }
 
 .text-shadow-lg {
