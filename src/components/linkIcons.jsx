@@ -1,6 +1,6 @@
-import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 
 const data = [
   {
@@ -66,21 +66,21 @@ const LinkIcons = () => {
         />
       </div>
       <div className="mt-6 lg:w-4/12 lg:h-auto lg:m-0 lg:order-first">
-        <div className="m-auto w-3/4 justify-between flex lg:block">
+        <div className="m-auto mx-6 justify-between flex lg:block">
           {data.map(icon => {
             return (
               <a
                 href={icon.url}
                 key={icon.name}
-                className="text-green-400 hover:text-green-700"
+                className="text-green-500 hover:text-green-700"
                 title={icon.name}
                 aria-label={icon.name}
               >
                 <svg
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 32 32"
                   preserveAspectRatio="xMidYMid meet"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="fill-current w-3/4 h-3/4 m-auto lg:ml-64 lg:py-6 lg:h-1/6 lg:w-1/6"
+                  className="fill-current w-12 h-12 m-auto mx-1 lg:ml-64 lg:py-6 lg:h-1/6 lg:w-1/6"
                 >
                   <path d={icon.svgPath} />
                 </svg>
