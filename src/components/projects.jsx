@@ -33,38 +33,40 @@ const Projects = () => {
             />
           </div>
         </Link>
-        <div>
+        <div className="text-center mt-1">
           <svg
-            className="w-2 h-2 inline-block"
+            className="w-2 h-2 mx-2 inline-block"
             viewBox="0 0 13 13"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="6.5" cy="6.5" r="6.5" fill="white" fillOpacity="0.33" />
+            <circle cx="6.5" cy="6.5" r="5.5" fill="white" fillOpacity="0.33" />
           </svg>
           <svg
-            className="w-2 h-2 inline-block"
+            className="w-2 h-2 mx-2 inline-block"
             viewBox="0 0 13 13"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="6.5" cy="6.5" r="6.5" fill="white" fillOpacity="0.17" />
+            <circle cx="6.5" cy="6.5" r="5.5" fill="white" fillOpacity="0.17" />
           </svg>
           <svg
-            className="w-2 h-2 inline-block"
+            className="w-2 h-2 mx-2 inline-block"
             viewBox="0 0 13 13"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="6.5" cy="6.5" r="6.5" fill="white" fillOpacity="0.17" />
+            <circle cx="6.5" cy="6.5" r="5.5" fill="white" fillOpacity="0.17" />
           </svg>
         </div>
 
-        <Link to="/projects/">
-          <button
-            type="button"
-            className="text-white bg-green-600 rounded-xl py-1 px-3 hover:text-500 font-bold focus:outline-none"
-          >
-            All Projects
-          </button>
-        </Link>
+        <div className="text-center mt-3 mb-16">
+          <Link to="/projects/">
+            <button
+              type="button"
+              className="text-white bg-green-600 tracking-wide rounded-xl py-1 px-3 hover:text-500 font-bold focus:outline-none"
+            >
+              All Projects
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   )
