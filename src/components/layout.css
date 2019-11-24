@@ -24,3 +24,11 @@ html {
 .rounded-xl {
   border-radius: 16px;
 }
+
+.scroll-snap-type-x-mandatory {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap-align-center {
+  scroll-snap-align: center;
+}
