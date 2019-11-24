@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import ImageGetter from './ImageGetter'
 
@@ -46,7 +46,6 @@ const ScrollIndicator = () => {
 }
 
 const ProjectCard = ({ project }) => {
-  console.log('project file =>', project.imageName)
   return (
     <div className="flex-shrink-0 w-full scroll-snap-align-center">
       <Link to={project.url}>
@@ -66,42 +65,12 @@ const ProjectCard = ({ project }) => {
 }
 
 const ProjectScroll = () => {
-  const data = useStaticQuery(graphql`
-    query ProjectImages {
-      images: allFile(filter: { absolutePath: { regex: "/_project./" } }) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              fluid {
-                base64
-                aspectRatio
-                src
-                srcSet
-                sizes
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  console.log('data => ', data)
-
   return (
-    <>
-      <div className="flex overflow-x-scroll w-full scroll-snap-type-x-mandatory">
-        {projectsArray.map(project => (
-          <ProjectCard key={project.name} project={project} />
-        ))}
-      </div>
-      <ScrollIndicator />
-    </>
+    <div className="flex overflow-x-scroll w-full scroll-snap-type-x-mandatory">
+      {projectsArray.map(project => (
+        <ProjectCard key={project.name} project={project} />
+      ))}
+    </div>
   )
 }
 
@@ -114,6 +83,7 @@ const Projects = () => {
           Projects
         </h2>
         <ProjectScroll />
+        <ScrollIndicator />
         <div className="text-center mt-3 mb-16">
           <Link to="/projects/">
             <button
