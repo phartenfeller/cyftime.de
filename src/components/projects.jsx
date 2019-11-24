@@ -63,7 +63,7 @@ const Projects = () => {
           <Link to="/projects/">
             <button
               type="button"
-              className="text-white bg-green-600 tracking-wide rounded-xl py-1 px-3 hover:text-500 font-bold focus:outline-none"
+              className="text-gray-300 bg-green-600 tracking-wide rounded-full py-2 px-6 hover:text-500 font-bold focus:outline-none"
             >
               All Projects
             </button>
