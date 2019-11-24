@@ -25,7 +25,9 @@ const Projects = () => {
         </h2>
         <Link to="/bokassa/">
           <div className="m-auto mx-12 rounded-xl shadow-xl bg-opacity-10 pb-6">
-            <div className="text-gray-300 text-3xl pt-3 pl-5">Bokassa</div>
+            <div className="text-gray-300 text-3xl pt-3 pl-5 font-semibold">
+              Bokassa
+            </div>
             <Img
               fluid={data.image.childImageSharp.fluid}
               alt="cyf bokassa ep cover"
