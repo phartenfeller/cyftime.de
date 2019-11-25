@@ -20,7 +20,7 @@ const projectsArray = [
 const ScrollIndicator = ({ scrollIndicator, elements }) => {
   const eleArray = [...Array(elements)]
   return (
-    <div className="text-center mt-1 mb-5">
+    <div className="text-center mt-1 mb-5 md:hidden">
       {eleArray.map((ele, i) => {
         return (
           <svg
@@ -45,7 +45,7 @@ const ScrollIndicator = ({ scrollIndicator, elements }) => {
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex-shrink-0 w-full scroll-snap-align-center active-shrink">
+    <div className="flex-shrink-0 w-full md:w-1/2 md:flex-shrink scroll-snap-align-center active-shrink lg:w-5/12 lg:m-auto xl:w-4/12">
       <Link to={project.url} className="focus:outline-none">
         <div className="m-auto mx-12 rounded-xl shadow-xl bg-opacity-10 pb-6">
           <h3 className="text-gray-300 text-3xl pt-3 pl-5 font-semibold">
@@ -93,7 +93,10 @@ const Projects = () => {
     <div>
       <hr className="mx-10 border-opacity-16 my-8" />
       <div style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-        <h2 className="mx-8 lg:mx-64 text-green-200 text-3xl font-bold mb-8">
+        <h2
+          id="projects"
+          className="mx-8 lg:mx-64 text-green-200 text-3xl font-bold mb-8"
+        >
           Projects
         </h2>
         <ProjectScroll setScrollIndicator={setScrollIndicator} />
@@ -105,7 +108,7 @@ const Projects = () => {
           <Link to="/projects/">
             <button
               type="button"
-              className="text-gray-300 bg-green-600 tracking-wide rounded-full py-2 px-6 hover:text-500 font-bold focus:outline-none"
+              className="hidden text-gray-300 bg-green-600 tracking-wide rounded-full py-2 px-6 hover:text-500 font-bold focus:outline-none"
             >
               All Projects
             </button>

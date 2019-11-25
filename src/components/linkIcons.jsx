@@ -57,36 +57,49 @@ const LinkIcons = () => {
   `)
 
   return (
-    <div className="lg:text-center lg:flex lg:h-5/12">
-      <div className="m-auto w-3/4 h-3/4 lg:m-auto lg:order-last lg:h-5/12 lg:w-5/12 xl:ml-32">
+    <div className="lg:flex">
+      <div className="m-auto text-center w-3/4 h-3/4 md:h-1/2 md:h-1/2 lg:h-3/4 lg:w-3/4 lg:order-last xl:ml-32">
         <Img
           fluid={imageData.image.childImageSharp.fluid}
           alt="cyf photo"
-          className="max-h-full max-w-full h-auto w-auto object-contain rounded-xl"
+          className="m-auto object-contain rounded-xl md:h-3/4 md:w-3/4"
         />
       </div>
-      <div className="mt-6 lg:w-4/12 lg:h-auto lg:m-0 lg:order-first">
-        <div className="m-auto mx-6 justify-between flex lg:block">
-          {data.map(icon => {
-            return (
-              <a
-                href={icon.url}
-                key={icon.name}
-                className="text-green-500 hover:text-green-700"
-                title={icon.name}
-                aria-label={icon.name}
-              >
-                <svg
-                  viewBox="0 0 32 32"
-                  preserveAspectRatio="xMidYMid meet"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="fill-current w-12 h-12 m-auto mx-1 lg:ml-64 lg:py-6 lg:h-1/6 lg:w-1/6"
+      <div className="mt-6 md:mx-20 lg:w-1/2">
+        <div className="lg:justify-center lg:flex-col lg:py-20 xl:py-32">
+          <div className="hidden lg:block text-4xl lg:ml-2 text-center">
+            <a className="block text-green-200" href="#projects">
+              Projects
+            </a>
+            <a className="block text-green-200" href="#about">
+              About
+            </a>
+            <a className="block text-green-200" href="#contact">
+              Contact
+            </a>
+          </div>
+          <div className="m-auto mx-8 justify-between flex lg:mx-0">
+            {data.map(icon => {
+              return (
+                <a
+                  href={icon.url}
+                  key={icon.name}
+                  className="text-green-500 hover:text-green-700 p-2 lg:p-0 lg:m-2"
+                  title={icon.name}
+                  aria-label={icon.name}
                 >
-                  <path d={icon.svgPath} />
-                </svg>
-              </a>
-            )
-          })}
+                  <svg
+                    viewBox="0 0 32 32"
+                    preserveAspectRatio="xMidYMid meet"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="fill-current w-full h-full m-auto mx-1"
+                  >
+                    <path d={icon.svgPath} />
+                  </svg>
+                </a>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>

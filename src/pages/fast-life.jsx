@@ -78,19 +78,19 @@ const Bokassa = () => {
           <Img
             fluid={data.image.childImageSharp.fluid}
             alt="cyf Fast Life single cover"
-            className="text-center shadow-2xl rounded-xl mx-8 mt-2 mb-5"
+            className="text-center shadow-2xl rounded-xl mx-8 mt-2 mb-5 md:h-6/12 md:w-6/12 lg:h-8/12 lg:w-8/12 md:m-auto"
           />
           <ProjectAvailable availability={availability} />
-
-          <iframe
-            loading="lazy"
-            title="Fast Life on YouTube"
-            className="w-full mt-8"
-            src="https://www.youtube-nocookie.com/embed/JezZqhmNBZ8"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <div className="mt-8 video-container">
+            <iframe
+              loading="lazy"
+              title="Fast Life on YouTube"
+              src="https://www.youtube-nocookie.com/embed/JezZqhmNBZ8"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </Layout>

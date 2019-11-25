@@ -25,13 +25,16 @@ const Contact = () => {
 
   return (
     <div className="mx-8 my-8 lg:mx-64">
-      <h2 className="text-green-200 text-3xl font-bold mb-2 inline-block mr-2">
+      <h2
+        id="contact"
+        className="text-green-200 text-3xl font-bold mb-2 inline-block mr-2"
+      >
         Contact
       </h2>
       <h1 className="text-green-200 text-3xl font-bold mb-2 inline-block">
         CYF
       </h1>
-      <form id="contact" className="mt-6">
+      <form id="contact" className="mt-6 md:mx-24 lg:mx-6 xl:mx-48">
         <label htmlFor="email" className="block mb-6">
           <input
             type="text"

@@ -91,31 +91,41 @@ const About = () => {
   return (
     <div className="mt-6 bg-green-800">
       <div className="mx-8 pt-6 pb-12 lg:mx-64">
-        <h2 className="text-gray-200 text-3xl font-bold mb-2 text-shadow-lg">
+        <h2
+          id="about"
+          className="text-gray-200 text-3xl font-bold mb-2 text-shadow-lg"
+        >
           About CYF
         </h2>
-        <TextCard>
-          {expanded ? <FullText /> : <TextPreview />}
-          <div className="mt-2">
-            {!expanded ? (
-              <button
-                type="button"
-                className="text-green-500 hover:text-500 text-sm focus:outline-nones"
-                onClick={() => setExpanded(true)}
-              >
-                More...
-              </button>
-            ) : (
-              <button
-                type="button"
-                className="text-green-500 hover:text-500 text-sm"
-                onClick={() => setExpanded(false)}
-              >
-                Collapse
-              </button>
-            )}
-          </div>
-        </TextCard>
+        <div className="lg:hidden">
+          <TextCard>
+            {expanded ? <FullText /> : <TextPreview />}
+            <div className="mt-2">
+              {!expanded ? (
+                <button
+                  type="button"
+                  className="text-green-500 hover:text-500 text-sm focus:outline-nones"
+                  onClick={() => setExpanded(true)}
+                >
+                  More...
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="text-green-500 hover:text-500 text-sm"
+                  onClick={() => setExpanded(false)}
+                >
+                  Collapse
+                </button>
+              )}
+            </div>
+          </TextCard>
+        </div>
+        <div className="hidden lg:block">
+          <TextCard>
+            <FullText />
+          </TextCard>
+        </div>
       </div>
     </div>
   )
@@ -127,7 +137,7 @@ const TextCard = ({ children }) => {
     height,
   })
   return (
-    <div className="py-8 px-6 bg-gray-200 text-gray-600 text-lg shadow-2xl rounded-xl leading-tight text-shadow-md">
+    <div className="py-8 px-6 bg-gray-200 text-gray-600 text-lg shadow-2xl rounded-xl leading-tight text-shadow-md md:mx-24 lg:mx-6 xl:mx-48">
       <animated.div style={{ ...props, overflow: 'hidden' }}>
         <div {...bind}>{children}</div>
       </animated.div>
