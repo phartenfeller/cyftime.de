@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 html {
+  -webkit-tap-highlight-color: transparent;
+
   background-color: #111010;
   @apply antialiased;
 }
@@ -31,4 +33,26 @@ html {
 
 .scroll-snap-align-center {
   scroll-snap-align: center;
+}
+
+.active-shrink:active {
+  transform: scale(0.95);
+  transition: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  background: transparent;
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+  background: transparent;
 }

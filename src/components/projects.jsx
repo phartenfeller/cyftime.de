@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageGetter from './ImageGetter'
 
 const projectsArray = [
@@ -17,42 +17,40 @@ const projectsArray = [
   },
 ]
 
-const ScrollIndicator = () => {
+const ScrollIndicator = ({ scrollIndicator, elements }) => {
+  const eleArray = [...Array(elements)]
   return (
     <div className="text-center mt-1">
-      <svg
-        className="w-2 h-2 mx-2 inline-block"
-        viewBox="0 0 13 13"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="6.5" cy="6.5" r="5.5" fill="white" fillOpacity="0.33" />
-      </svg>
-      <svg
-        className="w-2 h-2 mx-2 inline-block"
-        viewBox="0 0 13 13"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="6.5" cy="6.5" r="5.5" fill="white" fillOpacity="0.17" />
-      </svg>
-      <svg
-        className="w-2 h-2 mx-2 inline-block"
-        viewBox="0 0 13 13"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="6.5" cy="6.5" r="5.5" fill="white" fillOpacity="0.17" />
-      </svg>
+      {eleArray.map((_, i) => {
+        return (
+          <svg
+            key={i}
+            className="w-2 h-2 mx-2 inline-block"
+            viewBox="0 0 13 13"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="6.5"
+              cy="6.5"
+              r="5.5"
+              fill="white"
+              fillOpacity={scrollIndicator === i ? 0.33 : 0.17}
+            />
+          </svg>
+        )
+      })}
     </div>
   )
 }
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex-shrink-0 w-full scroll-snap-align-center">
-      <Link to={project.url}>
+    <div className="flex-shrink-0 w-full scroll-snap-align-center active-shrink">
+      <Link to={project.url} className="focus:outline-none">
         <div className="m-auto mx-12 rounded-xl shadow-xl bg-opacity-10 pb-6">
-          <div className="text-gray-300 text-3xl pt-3 pl-5 font-semibold">
+          <h3 className="text-gray-300 text-3xl pt-3 pl-5 font-semibold">
             {project.name}
-          </div>
+          </h3>
           <ImageGetter
             filename={project.imageName}
             alt="cyf bokassa ep cover"
@@ -64,9 +62,23 @@ const ProjectCard = ({ project }) => {
   )
 }
 
-const ProjectScroll = () => {
+const ProjectScroll = ({ setScrollIndicator }) => {
+  useEffect(() => {
+    document.getElementById('sidescroller').addEventListener('scroll', e => {
+      if (e.target.scrollLeft > e.target.clientWidth / 2) {
+        setScrollIndicator(1)
+      } else {
+        setScrollIndicator(0)
+      }
+      // console.log('scroll', e.target.scrollLeft, 'of', e.target.clientWidth)
+    })
+  })
+
   return (
-    <div className="flex overflow-x-scroll w-full scroll-snap-type-x-mandatory">
+    <div
+      id="sidescroller"
+      className="flex overflow-x-scroll w-full scroll-snap-type-x-mandatory scrollbar-hidden"
+    >
       {projectsArray.map(project => (
         <ProjectCard key={project.name} project={project} />
       ))}
@@ -75,6 +87,8 @@ const ProjectScroll = () => {
 }
 
 const Projects = () => {
+  const [scrollIndicator, setScrollIndicator] = useState(0)
+
   return (
     <div>
       <hr className="mx-10 border-opacity-16 my-8" />
@@ -82,8 +96,11 @@ const Projects = () => {
         <h2 className="mx-8 lg:mx-64 text-green-200 text-3xl font-bold mb-8">
           Projects
         </h2>
-        <ProjectScroll />
-        <ScrollIndicator />
+        <ProjectScroll setScrollIndicator={setScrollIndicator} />
+        <ScrollIndicator
+          scrollIndicator={scrollIndicator}
+          elements={projectsArray.length}
+        />
         <div className="text-center mt-3 mb-16">
           <Link to="/projects/">
             <button

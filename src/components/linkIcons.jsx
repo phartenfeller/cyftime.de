@@ -62,7 +62,7 @@ const LinkIcons = () => {
         <Img
           fluid={imageData.image.childImageSharp.fluid}
           alt="cyf photo"
-          className="max-h-full max-w-full h-auto w-auto object-contain"
+          className="max-h-full max-w-full h-auto w-auto object-contain rounded-xl"
         />
       </div>
       <div className="mt-6 lg:w-4/12 lg:h-auto lg:m-0 lg:order-first">
