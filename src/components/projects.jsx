@@ -20,11 +20,11 @@ const projectsArray = [
 const ScrollIndicator = ({ scrollIndicator, elements }) => {
   const eleArray = [...Array(elements)]
   return (
-    <div className="text-center mt-1">
-      {eleArray.map((_, i) => {
+    <div className="text-center mt-1 mb-5">
+      {eleArray.map((ele, i) => {
         return (
           <svg
-            key={i}
+            key={ele}
             className="w-2 h-2 mx-2 inline-block"
             viewBox="0 0 13 13"
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const ProjectScroll = ({ setScrollIndicator }) => {
       }
       // console.log('scroll', e.target.scrollLeft, 'of', e.target.clientWidth)
     })
-  })
+  }, [setScrollIndicator])
 
   return (
     <div
@@ -101,7 +101,7 @@ const Projects = () => {
           scrollIndicator={scrollIndicator}
           elements={projectsArray.length}
         />
-        <div className="text-center mt-3 mb-16">
+        <div className="text-center mt-4 mb-12">
           <Link to="/projects/">
             <button
               type="button"

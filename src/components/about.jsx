@@ -90,7 +90,7 @@ const About = () => {
 
   return (
     <div className="mt-6 bg-green-800">
-      <div className="mx-8 py-6 lg:mx-64">
+      <div className="mx-8 pt-6 pb-12 lg:mx-64">
         <h2 className="text-gray-200 text-3xl font-bold mb-2 text-shadow-lg">
           About CYF
         </h2>
