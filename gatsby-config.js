@@ -23,8 +23,8 @@ module.exports = {
         name: `cyftime`,
         short_name: `cyftime`,
         start_url: `/`,
-        background_color: `#68d391`,
-        theme_color: `#68d391`,
+        background_color: `#48bb78`,
+        theme_color: `#48bb78`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
