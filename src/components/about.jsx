@@ -104,7 +104,7 @@ const About = () => {
               {!expanded ? (
                 <button
                   type="button"
-                  className="text-green-500 hover:text-500 text-sm focus:outline-nones"
+                  className="text-purple-700 underline hover:text-purple-500 text-sm focus:outline-nones"
                   onClick={() => setExpanded(true)}
                 >
                   More...
@@ -112,7 +112,7 @@ const About = () => {
               ) : (
                 <button
                   type="button"
-                  className="text-green-500 hover:text-500 text-sm"
+                  className="text-purple-700 underline hover:text-purple-500 text-sm focus:outline-nones"
                   onClick={() => setExpanded(false)}
                 >
                   Collapse
@@ -137,7 +137,7 @@ const TextCard = ({ children }) => {
     height,
   })
   return (
-    <div className="py-8 px-6 bg-gray-200 text-gray-600 text-lg shadow-2xl rounded-xl leading-tight text-shadow-md md:mx-24 lg:mx-6 xl:mx-48">
+    <div className="py-8 px-6 bg-gray-200 text-gray-700 text-lg shadow-2xl rounded-xl leading-tight text-shadow-md md:mx-24 lg:mx-6 xl:mx-48">
       <animated.div style={{ ...props, overflow: 'hidden' }}>
         <div {...bind}>{children}</div>
       </animated.div>
