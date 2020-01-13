@@ -80,12 +80,13 @@ const Bokassa = () => {
         description="The EP Bokassa from cyf is now out! Listen to the songs like restin, silkey, slifer and bokassa on spotify, apple music, soundcloud and more..."
       />
       <div className="pb-10">
-        <div className="mx-8 lg:w-3/4 lg:m-auto xl:w-1/2">
-          <h1 className="text-3xl lg:text-5xl">CYF - Bokassa • EP</h1>
+        <div className="mx-8 md:w-3/4 md:m-auto lg:w-7/12 xl:w-1/2">
+          <h2 className="text-xl text-green-600">EP</h2>
+          <h1 className="text-3xl lg:text-5xl">CYF - Bokassa</h1>
           <Img
             fluid={data.image.childImageSharp.fluid}
             alt="cyf bokassa ep cover"
-            className="text-center shadow-2xl rounded-xl mx-8 mt-2 mb-5"
+            className="text-center shadow-2xl rounded-xl mx-8 mt-2 mb-5 md:h-6/12 md:w-6/12 lg:h-7/12 lg:w-7/12 md:m-auto lg:my-8"
           />
           <ProjectAvailable availability={availability} />
 

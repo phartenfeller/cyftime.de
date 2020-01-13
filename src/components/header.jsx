@@ -9,7 +9,7 @@ const Header = () => {
         <img
           src={logo}
           alt="cyf logo"
-          className="w-2/6 m-auto md:w-3/12 lg:w-2/12"
+          className="w-2/6 m-auto md:w-3/12 lg:w-2/12 xl:w-48"
         />
       </Link>
     </header>

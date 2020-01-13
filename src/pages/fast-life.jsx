@@ -73,15 +73,16 @@ const Bokassa = () => {
         description="The Single Fast Life from cyf is now out! Check out the incredible music video. The audio is available on spotify, apple music, soundcloud and more..."
       />
       <div className="pb-10">
-        <div className="mx-8 lg:w-3/4 lg:m-auto xl:w-1/2">
-          <h1 className="text-3xl lg:text-5xl">CYF - Fast Life • Single</h1>
+        <div className="mx-8 md:w-3/4 md:m-auto lg:w-7/12 xl:w-1/2">
+          <h2 className="text-xl text-green-600">Single</h2>
+          <h1 className="text-3xl lg:text-5xl">CYF - Fast Life</h1>
           <Img
             fluid={data.image.childImageSharp.fluid}
             alt="cyf Fast Life single cover"
-            className="text-center shadow-2xl rounded-xl mx-8 mt-2 mb-5 md:h-6/12 md:w-6/12 lg:h-8/12 lg:w-8/12 md:m-auto"
+            className="text-center shadow-2xl rounded-xl mx-8 mt-2 mb-5 md:h-6/12 md:w-6/12 lg:h-7/12 lg:w-7/12 md:m-auto lg:my-8"
           />
           <ProjectAvailable availability={availability} />
-          <div className="mt-8 video-container">
+          <div className="mt-8 video-container xl:mt-16">
             <iframe
               loading="lazy"
               title="Fast Life on YouTube"

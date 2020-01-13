@@ -75,13 +75,15 @@ const ProjectScroll = ({ setScrollIndicator }) => {
   }, [setScrollIndicator])
 
   return (
-    <div
-      id="sidescroller"
-      className="flex overflow-x-scroll w-full scroll-snap-type-x-mandatory scrollbar-hidden"
-    >
-      {projectsArray.map(project => (
-        <ProjectCard key={project.name} project={project} />
-      ))}
+    <div className="lg:mx-32">
+      <div
+        id="sidescroller"
+        className="flex overflow-x-scroll w-full scroll-snap-type-x-mandatory scrollbar-hidden"
+      >
+        {projectsArray.map(project => (
+          <ProjectCard key={project.name} project={project} />
+        ))}
+      </div>
     </div>
   )
 }
