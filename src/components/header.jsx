@@ -2,8 +2,18 @@ import { Link } from 'gatsby'
 import React from 'react'
 import logo from '../images/cyf_logo.svg'
 
-const ua = window.navigator.userAgent
-const isIE = /MSIE|Trident/.test(ua)
+let isIE
+if (
+  typeof window !== 'undefined' &&
+  window &&
+  window.navigator &&
+  window.navigator.userAgent
+) {
+  const ua = window.navigator.userAgent
+  isIE = /MSIE|Trident/.test(ua)
+} else {
+  isIE = false
+}
 
 const Header = () => {
   return (
