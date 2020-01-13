@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="flex-shrink-0 w-full md:w-1/2 md:flex-shrink scroll-snap-align-center active-shrink lg:w-5/12 lg:m-auto xl:w-4/12">
       <Link to={project.url} className="focus:outline-none">
-        <div className="m-auto mx-12 rounded-xl shadow-xl bg-opacity-10 pb-6">
+        <div className="m-auto mx-12 rounded-xl shadow-xl bg-opacity-10 pb-6 hover:bg-opacity-12">
           <h3 className="text-gray-300 text-3xl pt-3 pl-5 font-semibold">
             {project.name}
           </h3>
