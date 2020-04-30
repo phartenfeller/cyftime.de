@@ -4,6 +4,12 @@ import ImageGetter from './ImageGetter'
 
 const projectsArray = [
   {
+    name: 'Verses',
+    url: '/verses/',
+    imageName: 'cyf_verses_single_project.jpg',
+    type: 'single',
+  },
+  {
     name: 'Fast Life',
     url: '/fast-life/',
     imageName: 'cyf_fast_life_single_project.jpg',
@@ -65,11 +71,7 @@ const ProjectCard = ({ project }) => {
 const ProjectScroll = ({ setScrollIndicator }) => {
   useEffect(() => {
     document.getElementById('sidescroller').addEventListener('scroll', e => {
-      if (e.target.scrollLeft > e.target.clientWidth / 2) {
-        setScrollIndicator(1)
-      } else {
-        setScrollIndicator(0)
-      }
+      setScrollIndicator(Math.round(e.target.scrollLeft / e.target.clientWidth))
       // console.log('scroll', e.target.scrollLeft, 'of', e.target.clientWidth)
     })
   }, [setScrollIndicator])
