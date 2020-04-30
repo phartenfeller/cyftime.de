@@ -28,9 +28,10 @@ const ScrollIndicator = ({ scrollIndicator, elements }) => {
   return (
     <div className="text-center mt-1 mb-5 md:hidden">
       {eleArray.map((ele, i) => {
+        const m = i
         return (
           <svg
-            key={ele}
+            key={`i-${m}`}
             className="w-2 h-2 mx-2 inline-block"
             viewBox="0 0 13 13"
             xmlns="http://www.w3.org/2000/svg"
