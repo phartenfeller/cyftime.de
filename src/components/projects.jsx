@@ -104,6 +104,15 @@ const Projects = () => {
         >
           Projects
         </h2>
+        <h3 className="text-center text-purple-400 mb-6 text-lg sm:text-2xl md:mb-12 font-bold">
+          {'Check out the new single '}
+          <Link
+            className="underline hover:text-purple-300 active:text-purple-500 focus:text-purple-500"
+            to="/verses/"
+          >
+            Verses
+          </Link>
+        </h3>
         <ProjectScroll setScrollIndicator={setScrollIndicator} />
         <ScrollIndicator
           scrollIndicator={scrollIndicator}
