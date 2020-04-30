@@ -70,7 +70,7 @@ const Bokassa = () => {
     <Layout>
       <SEO
         title="Verses"
-        description="The Single Fast Life from cyf is now out! Check out the incredible music video. The audio is available on spotify, apple music, soundcloud and more..."
+        description="The Single Verses from cyf, jay and stapes is now out! Check out the song on spotify, apple music, soundcloud and more..."
       />
       <div className="pb-10">
         <div className="mx-8 md:w-3/4 md:m-auto lg:w-7/12 xl:w-1/2">
