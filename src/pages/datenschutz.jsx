@@ -35,7 +35,7 @@ const Text = () => (
     </p>
     <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
     <ul className="m-elements" />
-    <p>
+    <div>
       Stand: 13. Oktober 2019
       <h2 className="font-bold text-2xl text-gray-200 mt-8">
         Inhaltsübersicht
@@ -923,8 +923,8 @@ const Text = () => (
           Auswerten, das Speichern, das Übermitteln oder das Löschen.
         </li>
       </ul>
-    </p>
-    <p className="seal mt-8">
+    </div>
+    <div className="seal mt-8">
       <a
         href="https://datenschutz-generator.de/?l=de"
         title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
@@ -934,7 +934,7 @@ const Text = () => (
         Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
         Schwenke
       </a>
-    </p>
+    </div>
   </>
 )
 
