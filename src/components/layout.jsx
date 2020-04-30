@@ -29,7 +29,14 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer>
           <div className="block sm:inline-block">
-            {`©  ${new Date().getFullYear()} Built with `}
+            {`©  ${new Date().getFullYear()} Built by `}
+            <a
+              href="https://hartenfeller.dev"
+              className="underline hover:text-white"
+            >
+              Philipp Hartenfeller
+            </a>
+            <span> with </span>
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </div>
           <Link
