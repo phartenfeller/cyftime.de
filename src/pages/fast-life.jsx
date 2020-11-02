@@ -59,7 +59,7 @@ const Bokassa = () => {
         id
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

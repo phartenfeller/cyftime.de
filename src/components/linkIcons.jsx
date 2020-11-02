@@ -49,7 +49,7 @@ const LinkIcons = () => {
         id
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

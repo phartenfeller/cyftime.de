@@ -18,7 +18,7 @@ const ImageGetter = ({ filename, classes }) => {
             edges {
               node {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
